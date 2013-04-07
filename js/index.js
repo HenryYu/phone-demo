@@ -48,4 +48,41 @@ $(function() {
             }
         }
     } catch(e) {}
+	
+	
+	//Render mobile demo
+	var content = $("#json-content").text();
+	var obj = JSON.parse(content);
+	console.log(obj.data);
+	
+	var table = [];
+	var column = ['name', 'totalHosts', 'kpi_percentage', 'peak'];
+	var nameMap = {name: '名称', totalHosts: "机器数", kpi_percentage: "KPI", peak: "峰值"};
+	table.push('<table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">');
+	table.push('<thead>');
+	table.push('<tr>');
+	for(var i = 0; i<column.length; i++) {
+		table.push('<th>');
+		table.push(nameMap[column[i]]);
+		table.push('</th>');
+	}
+	table.push('</tr>');
+	table.push('</thead>');
+	
+	table.push('<tbody>');
+	for(var i = 0; i < obj.data.list.length; i++) {
+		table.push('<tr>');
+		for(var j=0; j<column.length; j++) {
+			table.push('<td>');
+			table.push(obj.data.list[i][column[j]]);
+			table.push('</td>');
+		}
+		table.push('</tr>');
+	}
+	
+	table.push('</tbody>');
+	table.push('</table>');
+	
+	console.log(table.join(''));
+	//$('#phone-preview').html(table.join(''));
 });
