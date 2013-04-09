@@ -65,8 +65,8 @@ $(function() {
 	for(var i = 0; i<column.length; i++) {
 		var index = i + 1;
 		var className = "ui-table-priority-" + index;
-		// table.push('<th class="' + className + '" data-priority="' + index + '">');
-		table.push('<th>');
+		table.push('<th class="' + className + '" data-priority="' + index + '">');
+		//table.push('<th>');
 		table.push(nameMap[column[i]]);
 		table.push('</th>');
 	}
@@ -97,6 +97,10 @@ $(function() {
 	
 	$("#preview").click(function() {
 		$('#phone-preview').html(table.join(''));
+		$('#table-column-toggle-popup-popup').remove();
+		$('#table-column-toggle').table();
+	    //$('#mobile-page').page("refresh");
+		$(":jqmData(role='controlgroup')").controlgroup();
 	});
 
 });
