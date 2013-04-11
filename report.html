@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+	<style type="text/css">
+      body {
+        padding: 2px;
+      }
+	  
+	  @media (max-width: 767px) {
+		
+	  }
+	</style>
+  </head>
+  <body>
+  
+	<h1 style="display:none">Weekly Report</h1>
+	<table class="table table-bordered table-hover table-striped table-condensed">
+		<thead>
+			<tr>
+				<th colspan="2">指标</th>
+				<th>KPI</th>
+				<th>截止到本周的月均值</th>
+				<th class="hidden-phone">指标说明</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="2">CPU日均值</td>
+				<td>25</td>
+				<td>26.4</td>
+				<td class="hidden-phone">说明：按周统计，上周数值，并在说明中体现变化趋势（较上周数据增加或减少xx百分点）</td>
+			</tr>
+			<tr>
+				<td rowspan="2">可用性</td>
+				<td>网页搜索</td>
+				<td>拒绝率<=0.5%%</td>
+				<td>0.14%%</td>
+				<td class="hidden-phone">说明：按季度统计，提供截止到当周的数值</td>
+			</tr>
+			<tr>
+				<td>无线搜索</td>
+				<td>拒绝率<=0.5%%</td>
+				<td>可用性>=99.99%</td>
+				<td class="hidden-phone">说明：按季度统计，提供截止到当周的数值</td>
+			</tr>
+			<tr>
+				<td rowspan="2">MTTR</td>
+				<td>网页搜索</td>
+				<td>拒绝率<=0.5%%</td>
+				<td>0.14%%</td>
+				<td class="hidden-phone">说明：按季度统计，提供截止到当周的数值</td>
+			</tr>
+			<tr>
+				<td>无线搜索</td>
+				<td>拒绝率<=0.5%%</td>
+				<td>0.14%%</td>
+				<td class="hidden-phone">说明：按季度统计，提供截止到当周的数值</td>
+			</tr>
+			<tr>
+				<td rowspan="3">访问速度</td>
+				<td rowspan="2">网页搜索</td>
+				<td rowspan="2">领先竞品流量覆盖率>=95%<=0.5%%</td>
+				<td>vs 360</td>
+				<td rowspan="2" class="hidden-phone">说明：上周统计数据（UAQ）</td>
+			</tr>
+			<tr>
+				<td>vs soso</td>
+			</tr>
+			<tr>
+				<td>无线搜索</td>
+				<td>领先竞品流量覆盖率100%</td>
+				<td></td>
+				<td class="hidden-phone">说明：上周统计数据（UAQ）</td>
+			</tr>
+			<tr>
+				<td colspan="2">DUI</td>
+				<td></td>
+				<td></td>
+				<td class="hidden-phone">说明：按季度统计，提供截止到当周的数值</td>
+			</tr>
+			<tr>
+				<td rowspan="2">变更效率</td>
+				<td>变更数量</td>
+				<td></td>
+				<td></td>
+				<td class="hidden-phone">按周统计，Icafe工单数量</td>
+			</tr>
+			<tr>
+				<td>单均交付时间</td>
+				<td></td>
+				<td></td>
+				<td class="hidden-phone">按周统计</td>
+			</tr>
+		</tbody>
+	</table>
+  
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
